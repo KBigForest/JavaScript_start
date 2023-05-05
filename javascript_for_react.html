@@ -1,0 +1,85 @@
+<!DOCTYPE html>
+<html lang="en">
+  <head>
+    <meta charset="UTF-8" />
+    <meta http-equiv="X-UA-Compatible" content="IE=edge" />
+    <meta name="viewport" content="width=device-width, initial-scale=1.0" />
+    <title>Document</title>
+  </head>
+  <body>
+    <script>
+      const myName = "Max";
+      document.write(myName);
+      const newfun = () => {};
+      function printMyName(myName) {
+        document.write(myName);
+      }
+      const printMyName = (name) => {
+        document.write(name);
+      };
+      const printMyNameAge = (name, age) => {
+        document.write(name + age);
+      };
+    </script>
+    <script>
+      const mulitple = (number) => {
+        return number * 2;
+      };
+      document.write(mulitple(1));
+    </script>
+
+    <script>
+      class Human {
+        gender = "male";
+        printMyGender = (gender) => {
+          document.write(this.gender);
+        };
+      }
+
+      <!-- 상속 개념의 사용 -->
+      class Person extends Human {
+        name = "Max";
+        printMyName = (name) => {
+          document.write(this.name);
+        };
+      }
+      const persoan = new Person();
+      persoan.printMyName();
+      persoan.printMyGender();
+    </script>
+    <script>
+      const numbers = [1, 2, 3];
+      const newNumbers = [...numbers, 4, 5, 6, 7];
+      document.write(newNumbers);
+
+      const person = {
+        name: "Max",
+      };
+      const newPerson = {
+        ...person,
+        age: 30,
+      };
+
+      const filter = (...args) => {
+        return args.filter((el) => el === 1);
+      };
+      document.write("<br>" + filter(1, 2, 3));
+    </script>
+    <script>
+      const numberss = [1, 2, 3];
+      [num1, , num3] = numberss;
+      document.write(num1, num3);
+    </script>
+    <script>
+      const number1 = 1;
+    </script>
+    <script>
+      const numbersss = [1, 2, 3];
+      const doublenumarry = numbersss.map((num) => {
+        return num * 2;
+      });
+      document.write(numbersss);
+      document.write(doublenumarry);
+    </script>
+  </body>
+</html>
